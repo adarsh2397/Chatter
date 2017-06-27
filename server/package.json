@@ -1,0 +1,18 @@
+{
+  "name": "chatter-server",
+  "version": "1.0.0",
+  "description": "Server Side for the Chatter App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adarsh Honawad",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "mysql": "^2.13.0",
+    "socket.io": "^2.0.3"
+  }
+}

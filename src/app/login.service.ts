@@ -46,8 +46,8 @@ export class LoginService {
 
 
   private extractData(res: Response) {
-    console.log(res);
-    return res;
+    //console.log(res);
+    return res['_body'];
   }
 
   private handleError (error: Response | any) {

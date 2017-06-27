@@ -1,0 +1,7 @@
+<ul id="active-list" style="list-style-type:none;">
+    <li *ngFor="let x of activeMembers">
+        <a role="button" (click)="setMember(x['name']);">
+            {{x['name']}}
+        </a>
+    </li>
+</ul>

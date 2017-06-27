@@ -1,1 +1,40 @@
 <button class="btn btn-info" (click)="logout();">Logout</button>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 box">
+            <div class="box-header">
+                ChatRoom <a role="button" (click)="loadMessages();">(Refresh)</a>
+            </div>
+            <p *ngIf="typing">Typing...</p>
+            <div class="chat-room">
+                <div class="chat-messages" id="chat-messages">
+                    <ul id="m-list">
+                        <li *ngFor="let message of messages">
+                            {{message.from_name}} : {{message.body}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="input">
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control chat-input" id="message">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit" (click)="send();">
+                                    Send
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 box">
+            <div class="box-header">
+                Online Members
+            </div>
+            <div class="box-body">
+                <app-online></app-online>
+            </div>
+        </div>
+    </div>
+</div>

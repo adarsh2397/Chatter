@@ -8,9 +8,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
+import { ChatboxComponent } from './chatbox/chatbox.component';
 
 import { LoginService } from './login.service';
-import { ChatboxComponent } from './chatbox/chatbox.component';
+import { ChatService } from './chat.service';
+import { OnlineComponent } from './chatbox/online/online.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { ChatboxComponent } from './chatbox/chatbox.component';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    ChatboxComponent
+    ChatboxComponent,
+    OnlineComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,7 @@ import { ChatboxComponent } from './chatbox/chatbox.component';
   ],
   providers: [
     LoginService,
+    ChatService,
   ],
   bootstrap: [AppComponent]
 })
